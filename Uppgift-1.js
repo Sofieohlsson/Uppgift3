@@ -13,3 +13,6 @@ function Person (namn, epost, mobil, gatuadress, postnummer, ort){
 
 let sofie = new Person("Sofie Ohlsson", "sofieohlsson@gmail.com", "0745987245", "Stråkvägen 1", "169 35", "Solna"); 
 sofie.print(); 
+
+let sixten = new Person("Sixten Olsson", "sixten610@gmail.com", "0742593746", "Vasagatan 1", "411 24 ", "Göteborg"); 
+sixten.print(); 

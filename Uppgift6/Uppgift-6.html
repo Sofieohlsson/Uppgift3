@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fakultet</title>
-</head>
-<body>
-    <h1 id ="result";></h1>
-    <script>
-        let tal = prompt("Ange ett heltal mellan 1 och 1000: "); 
-        
-        if(tal > 170)
+    <head>
+        <meta charset="UTF-8">
+        <title>Fakultet</title>
+    </head>
+    <body>
+        <h1 id ="result";></h1>
+
+        <script> 
+        let tal = prompt("Ange ett heltal mellan 1 och 1000: ");         
+
+        if (tal === null || tal === "")                              // Om användaren trycker på cancel eller ok kommer ett felmeddelande
+        alert("Fel inmatning"); 
+
+        else if(tal > 170)                                          // Tal över 170 ger infinity, detta visas i en pop up 
         alert("Infinity!"); 
 
-        if (tal === null){
-            alert("Fel inmatning"); 
-        }
-        else {
-        function fakultet(){
+        else if(tal > 1 && tal <= 170){                            // funktionen aktiveras enbart om talet är mellan 1 och 170 
+            function fakultet(){
             let produkt = 1; 
-            for(let i = 1; i <= Number(tal); i++){
+            for(let i = 1; i <= tal; i++){
                 produkt *= i; 
             }
-            result.innerHTML = tal+"! = " + produkt; 
+            result.innerHTML = tal+"! = " + produkt;
+            }0
         }
-        fakultet(); 
-        }
+        else
+        alert("Fel inmatning");                                         // Tar allting annat, inklusive text och skickar ett felmeddelande
+    
+    fakultet(); 
     </script>
 </body>
 </html>

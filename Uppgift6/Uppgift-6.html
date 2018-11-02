@@ -8,15 +8,23 @@
     <h1 id ="result";></h1>
     <script>
         let tal = prompt("Ange ett heltal mellan 1 och 1000: "); 
-        let produkt = 1; 
+        
+        if(tal > 170)
+        alert("Infinity!"); 
 
+        if (tal === null || tal === ""){
+            alert("Fel inmatning"); 
+        }
+        else {
         function fakultet(){
+            let produkt = 1; 
             for(let i = 1; i <= Number(tal); i++){
                 produkt *= i; 
             }
             result.innerHTML = tal+"! = " + produkt; 
         }
         fakultet(); 
+        }
     </script>
 </body>
 </html>

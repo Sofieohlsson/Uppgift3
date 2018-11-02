@@ -12,39 +12,39 @@ alla tal och skapa en frekvenstabell
 • Skriv ut tabellen i konsolfönstret.
 • Testa programmet flera gånger för att kontrollera att du får olika tabeller vid varje körning.*/
 
-let randomArray = []; 
 
 function randomDice(){
+    let randomArray = [];
     for(let i = 0; i < 1000; i++){
         randomArray.push(Math.floor((Math.random() *6) +1)); 
     }
+    return randomArray;
 }
 
-randomDice();
-let one = 0; 
-let two = 0; 
-let three = 0; 
-let four = 0; 
-let five = 0; 
-let six = 0; 
-
 function print(){
-    randomDice(); 
+    let randomArray = randomDice(); 
+    let one   = 0; 
+    let two   = 0; 
+    let three = 0; 
+    let four  = 0; 
+    let five  = 0; 
+    let six   = 0; 
+    
     for (let i = 0; i < 1000; i++){
         switch(randomArray[i]){
-            case 1: one += 1; break; 
-            case 2: two += 1; break; 
+            case 1: one   += 1; break; 
+            case 2: two   += 1; break; 
             case 3: three += 1; break; 
-            case 4: four += 1; break; 
-            case 5: five += 1; break; 
-            case 6: six += 1; break; 
+            case 4: four  += 1; break; 
+            case 5: five  += 1; break; 
+            case 6: six   += 1; break; 
         }
     }
-    console.log("Antal ettor: "  + one + "\n" +
-                "Antal tvåor: "  + two + "\n" +
+    console.log("Antal ettor: "  + one   + "\n" +
+                "Antal tvåor: "  + two   + "\n" +
                 "Antal treor: "  + three + "\n" +
-                "Antal fyror: "  + four + "\n" +
-                "Antal femmor: " + five + "\n" +
+                "Antal fyror: "  + four  + "\n" +
+                "Antal femmor: " + five  + "\n" +
                 "Antal sexor: "  + six);
 }
 print(); 

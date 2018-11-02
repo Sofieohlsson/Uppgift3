@@ -13,9 +13,9 @@ alla tal och skapa en frekvenstabell
 • Testa programmet flera gånger för att kontrollera att du får olika tabeller vid varje körning.*/
 
 
-function randomDice(){
-    let randomArray = [];
-    for(let i = 0; i < 1000; i++){
+function randomDice(){                                              // deklarerar en array och använder en for-sats som loopar igenom 
+    let randomArray = [];                                           // exakt 1000 gånger och lägger till ett element i arrayen
+    for(let i = 0; i < 1000; i++){                                  // i form av en slumpmässig siffra mellan 1 och 6 
         randomArray.push(Math.floor((Math.random() *6) +1)); 
     }
     return randomArray;
@@ -23,16 +23,16 @@ function randomDice(){
 
 function print(){
     let randomArray = randomDice(); 
-    let one   = 0; 
+    let one   = 0;                                                    // deklarerar counters för alla möjliga outcomes 
     let two   = 0; 
     let three = 0; 
     let four  = 0; 
     let five  = 0; 
     let six   = 0; 
     
-    for (let i = 0; i < 1000; i++){
+    for (let i = 0; i < 1000; i++){                                  // Loopar igenom arrayen och lägger till 1 på rätt counter 
         switch(randomArray[i]){
-            case 1: one   += 1; break; 
+            case 1: one   += 1; break;                                 
             case 2: two   += 1; break; 
             case 3: three += 1; break; 
             case 4: four  += 1; break; 
